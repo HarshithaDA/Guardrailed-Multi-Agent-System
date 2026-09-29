@@ -1,4 +1,4 @@
-## Multi-Agent Workflow with Structured Output & Memory
+# Multi-Agent Workflow with Structured Output & Memory
 
 A guardrailed multi-agent workflow built with **LangGraph, CrewAI, PydanticAI, and Mem0**. The system follows a **Planner → Executor → Reviewer** architecture, with LangGraph managing state and execution flow, CrewAI providing the agents, and PydanticAI enforcing strict, type-safe structured outputs.
 
