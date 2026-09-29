@@ -470,7 +470,7 @@ The execution budget and fallback mechanism prevent uncontrolled agent loops and
 
 Mem0 allows successful results to be reused across executions without repeatedly sending the entire historical context to the LLM.
 
-Architecture :
+### Architecture 
 
 ```text
                     ┌──────────────┐
