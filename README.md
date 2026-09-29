@@ -470,7 +470,7 @@ The execution budget and fallback mechanism prevent uncontrolled agent loops and
 
 Mem0 allows successful results to be reused across executions without repeatedly sending the entire historical context to the LLM.
 
-The resulting architecture is:
+Architecture :
 
 ```text
                     ┌──────────────┐
@@ -528,4 +528,4 @@ User Task ──────────► LangGraph State
 ```
 
 
-Together, these design decisions produce a multi-agent workflow that is not simply capable of generating an answer, but also has explicit controls for **execution limits, output validation, failure handling, and cross-session memory**.
+
