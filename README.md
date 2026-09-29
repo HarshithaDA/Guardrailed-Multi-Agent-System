@@ -1,4 +1,23 @@
-# Guardrailed-Multi-Agent-System
+## Multi-Agent Workflow with Structured Output & Memory
+
+A guardrailed multi-agent workflow built with **LangGraph, CrewAI, PydanticAI, and Mem0**. The system follows a **Planner → Executor → Reviewer** architecture, with LangGraph managing state and execution flow, CrewAI providing the agents, and PydanticAI enforcing strict, type-safe structured outputs.
+
+The workflow includes a hard **maximum of 3 execution attempts** to prevent uncontrolled agent loops, with a safe fallback when the retry budget is exceeded. **Mem0** provides persistent semantic memory using **SQLite for history and Chroma for vector storage**, allowing relevant information from previous executions to be retrieved without passing the entire conversation history to the model.
+
+### Key Features
+
+* Planner → Executor → Reviewer multi-agent architecture
+* LangGraph state management and conditional routing
+* Maximum execution limit of **N ≤ 3**
+* Safe fallback / kill-switch for exceeded execution budget
+* Strict PydanticAI schemas for structured output validation
+* Reviewer-based approval and retry mechanism
+* Persistent Mem0 semantic memory
+* SQLite history + Chroma vector storage
+* Hugging Face `all-MiniLM-L6-v2` embeddings
+* Groq API for LLM inference
+* Bounded memory retrieval and concise outputs to control token usage
+
 
 # Design Decisions
 
